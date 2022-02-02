@@ -1,0 +1,38 @@
+
+Constantes: 
+1
+3
+-1
+-5
+7
+2
+
+Constant 1
+PLUSONE
+
+Constant 3
+PLUSONE
+DUP
+INC
+
+Constant -1
+MINUSONE
+
+Constant -5
+MINUSONE
+DUP
+DUP
+INC
+DUP
+INC
+
+Constant 7
+PLUSONE
+DUP
+INC
+DUP
+INC
+
+Constant 2
+PLUSONE
+INC
