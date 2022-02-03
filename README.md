@@ -23,7 +23,7 @@
   
 <h2> Observações </h2>
 <ul>
-<li> Depois de um certo número de linhas no arquivo de entrada o programa fecha sozinho.</li>
+<li> Por algum motivo, só pode ter até 7 linhas no arquivo de entrada (um número por linha). Se tiver mais linhas o programa fecha.</li>
 <li> O programa foi implementado no Windows.</li>
 </ul>
 
@@ -34,9 +34,15 @@
 <h3><b> Função Construtores </b></h3>
 <p> Nessa função contém a lógica do ALGOC. </p>
 <p> Fiz uma parte para os números 1 e -1, já que seus construtores é apenas o PLUSONE ou o MINUSONE.</p>
-<p> Para encontrar os construtores dos números positivos eu crio uma variável chamada novoNum, para que, a partir dela, eu possa saber quanto está dando a conta dos contrutores. Como para os números positivos não possui uma maneira de abaixar o valor do novoNum, eu uso a condição que, antes de *2 eu confiro se vai passar do valor do num (número provindo do algoc.in). </p>
-<p> Para encontrar os construtores dos números negativos, eu tirei a condição do "do-while" ser feito apenas se o novoNum for menor que num, até por que, com os números negativos é possível subtrair. E, para encontrar resultados com um menor número de construtores, eu coloquei uma condição na hora de multiplicar.</p>
-<p> Após encontrado todos os construtores, eu coloco um zero na última posição do array tipo[]. Isso será usado na função 'tamanho'.  </p>
+<p> Para encontrar os construtores dos números positivos eu crio uma variável chamada novoNum, para que, a partir dela, eu possa saber quanto está dando a conta dos contrutores. Como para os números positivos não possui uma maneira de abaixar o valor do novoNum, eu uso a condição que, antes de multiplicar por 2 eu confiro se vai passar do valor do num (número provindo do algoc.in). Além disso, criei as variaveis 'count', 'seg' e 'i' ou 'a'.</p>
+<ul>
+  <li> <b>count:</b> Ela foi criada para poder saber quantos construtores teria para o número, partindo de duas lógicas diferentes. No final, eu comparo 'count1' e 'count2' para ver qual foi menor, visto que essa é uma das regras do programa.</li>
+  <li> <b>seg: Essa variável foi criada para caso 'count1' seja igual à 'count2', então é exibido o resultado de conjunto de construtores que os segundo para executá-lo seja menor. Lembrando que DUP = 1s e INC = 2s.</b> </li>
+  <li> <b>i ou a:</b> Essas são as variáveis de incrementação para que seja possível saber o índice dos elementos.</li>
+</ul>
+<p> Ainda na lógica dos números positivos, foi criado dois arrays 'tipo[]' e 'tipo1[]' para salvar os construtores encontrados e salvar no array de retorno ('tipoResult[]') somente quando soubesse que aquela sequência de contrutores era a menor e mais rápida.
+<p> Para encontrar os construtores dos números negativos, eu tirei a condição do "do-while" ser feito apenas se o 'novoNum' for menor que 'num', até por que, com os números negativos é possível subtrair. E, para encontrar resultados com um menor número de construtores, eu coloquei uma condição na hora de multiplicar, logo, para esse números eu não usei a mesma lógica dos números positivos e também não precisei criar as variáveis 'count' e 'seg'.</p>
+<p> Após encontrado todos os construtores, eu coloco um zero na última posição do array 'tipoResult[]'. Isso será usado na função 'tamanho'.  </p>
 
 <h3><b> Função Tamanho </b></h3>
 <p> Fiz essa função para encontrar o tamanho do array gerado pela função 'contrutores'. Tentei encontrar esse valor de outras maneiras, mas preferi fazendo assim.</p>
